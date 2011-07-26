@@ -145,6 +145,7 @@ class Php < Formula
     system "make"
     system "make install"
 
+    etc.mkpath
     system "cp ./php.ini-production #{etc}/php.ini" unless File.exists? "#{etc}/php.ini"
   end
 
